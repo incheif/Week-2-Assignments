@@ -11,8 +11,9 @@ function sum(counter){
 }
 
 function handlefirstreq(req,res){
-  var sumis=sum(12);
-  res.send("The sum is" + sumis);
+  var counter=req.query.counter;
+  var sumis=sum(counter);
+  res.send("The sum is " + sumis);
 }
 
 app.get('/handlesum',handlefirstreq)
