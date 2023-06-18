@@ -15,8 +15,11 @@ function handlefirstreq(req,res){
   var sumis=sum(counter);
   res.send("The sum is " + sumis);
 }
-
+function handlesecondreq(req,res){
+  res.send("Post request accepted")
+}
 app.get('/handlesum',handlefirstreq)
+app.post('/createUser',handlesecondreq)
 
 function started(){
   console.log("Listening on port " + port);
